@@ -18,9 +18,17 @@ public class SQLConnection {
             connection = DriverManager.getConnection(url, username, password);
             connection.setAutoCommit(false); //Disable auto-commit to start a transaction
             System.out.println("Connected to the database.");
-        } catch (SQLException e) {
+        } catch(SQLException e) {
             System.out.println("Error connecting to the database: " + e.getMessage());
         }
+    }
+
+    /**
+     * Retrieves the current database connection
+     * @return The current database connection
+     */
+    public Connection getConnection() {
+        return connection;
     }
 
     /**
@@ -30,7 +38,7 @@ public class SQLConnection {
         try {
             connection.close();
             System.out.println("Connection closed.");
-        } catch (SQLException e) {
+        } catch(SQLException e) {
             System.out.println("Error closing connection: " + e.getMessage());
         }
     }
