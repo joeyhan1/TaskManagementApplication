@@ -54,6 +54,7 @@ public class LoginScreen {
                 //Testing purposes
 //                System.out.println(usernameField.getText());
 //                System.out.println(passwordField.getText());
+//                System.out.println("Action Performed: " + e.getActionCommand());
                 String username = usernameField.getText();
                 String password = passwordField.getText();
                 if(authentication.authenticate(username, password)) {
