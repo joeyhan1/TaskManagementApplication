@@ -11,6 +11,7 @@ public class AllActionListener implements ActionListener {
     private AddTaskScreen addTaskScreen = new AddTaskScreen();
     private ProjectScreens projectScreens = new ProjectScreens(userRole);
     private CheckTaskScreen checkTaskScreen = new CheckTaskScreen(userRole);
+    private HomeScreen homeScreen = new HomeScreen();
 
     /**
      * Constructor to initialize the user role.
@@ -40,6 +41,10 @@ public class AllActionListener implements ActionListener {
             System.out.println("Button pressed: " + buttonText);
             if(userRole.equals("ADMIN")) {
                 switch(buttonText) {
+                    case "Home":
+                        homeScreen.getAdminScreen();
+                        closeFrame(frame);
+                        break;
                     case "Add Task":
                         addTaskScreen.getScreen();
                         closeFrame(frame);

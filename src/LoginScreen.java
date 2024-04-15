@@ -61,6 +61,9 @@ public class LoginScreen {
                     String userRole = getRole(username, password);
                     switch(userRole) {
                         case "ADMIN":
+                            CurrentUser currentUser = CurrentUser.getInstance();
+                            //Setting the username of the current user of the application
+                            currentUser.setUsername(username);
                             homeScreen.getAdminScreen();
                             frame.dispose();
                             break;

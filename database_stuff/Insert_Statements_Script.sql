@@ -24,7 +24,6 @@ VALUES
 ('aeastment8', 'gmatitiaho8@google.es', 'hD5"5@8n', 'ADMIN', 5),
 ('tscranny9', 'gcurlis9@theglobeandmail.com', 'pM8~!H&QPL(H21', 'EMPLOYEE', 5);
 
-
 -- Insert 10 Projects
 INSERT INTO Project (ProjectName, Description, StartDate, EndDate, TeamID)
 VALUES
