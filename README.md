@@ -13,7 +13,7 @@ You will also need to import following libraries:
 ## Features
 * **User Authentication:** Users are able to login with their username and password. The details are checked with the database to ensure that it is correct. (Done)
 * **Adding Projects:** Adminstration users are able to add project into the database which their team are able to see. (Done)
-* **Adding Tasks:** Adminstration users are able to add tasks into the database which their team are able to see. (WIP)
+* **Adding Tasks:** Adminstration users are able to add tasks into the database which their team are able to see. (Done)
 * **Edit Projects:** Adminstration users are able to edit projects in the database. (WIP)
 * **Edit Tasks:** Adminstration users are able to edit their own tasks and their team members tasks in the database. (WIP)
 * **Check Projects:** Any users are able to check what projects their team has. (WIP)
