@@ -50,7 +50,7 @@ public class AllActionListener implements ActionListener {
                         closeFrame(frame);
                         break;
                     case "Check Tasks":
-                        checkTaskScreen.getCheckTaskScreen();
+                        checkTaskScreen.getCheckTaskScreenAdmin();
                         closeFrame(frame);
                         break;
                     case "Add Project":
@@ -58,7 +58,7 @@ public class AllActionListener implements ActionListener {
                         closeFrame(frame);
                         break;
                     case "Check Team Projects":
-                        projectScreens.getCheckProjectScreen();
+                        projectScreens.getCheckProjectScreenAdmin();
                         closeFrame(frame);
                         break;
                     default:
@@ -66,12 +66,16 @@ public class AllActionListener implements ActionListener {
                 }
             } else if(userRole.equals("EMPLOYEE")) {
                 switch(buttonText) {
+                    case "Home":
+                        homeScreen.getEmployeeScreen();
+                        closeFrame(frame);
+                        break;
                     case "Check Tasks":
-                        checkTaskScreen.getCheckTaskScreen();
+                        checkTaskScreen.getCheckTaskScreenEmployee();
                         closeFrame(frame);
                         break;
                     case "Check Team Projects":
-                        projectScreens.getCheckProjectScreen();
+                        projectScreens.getCheckProjectScreenEmployee();
                         closeFrame(frame);
                         break;
                     default:

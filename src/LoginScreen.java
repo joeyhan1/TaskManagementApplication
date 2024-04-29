@@ -58,16 +58,18 @@ public class LoginScreen {
                 String username = usernameField.getText();
                 String password = passwordField.getText();
                 if(authentication.authenticate(username, password)) {
+                    CurrentUser currentUser = CurrentUser.getInstance();
                     String userRole = getRole(username, password);
                     switch(userRole) {
                         case "ADMIN":
-                            CurrentUser currentUser = CurrentUser.getInstance();
                             //Setting the username of the current user of the application
                             currentUser.setUsername(username);
                             homeScreen.getAdminScreen();
                             frame.dispose();
                             break;
                         case "EMPLOYEE":
+                            //Setting the username of the current user of the application
+                            currentUser.setUsername(username);
                             homeScreen.getEmployeeScreen();
                             frame.dispose();
                             break;
